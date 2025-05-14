@@ -58,10 +58,13 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b634?auto=format&fit=crop&w=1920');
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1505210512658-3ae58ae08744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,11 +76,13 @@ nav {
 .hero-content h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -87,17 +92,43 @@ nav {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     background: #f5d742;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Thank You Page Custom Styling */
+/* Thank You Page */
 .thank-you {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1920') center/cover no-repeat;
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1920') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.thank-you-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.thank-you h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.thank-you p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
 /* Services */
@@ -110,6 +141,7 @@ nav {
 .services h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
+    color: #222;
 }
 
 .services-grid {
@@ -125,11 +157,12 @@ nav {
     padding: 40px 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .service-card i {
@@ -138,15 +171,27 @@ nav {
     margin-bottom: 20px;
 }
 
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.service-card p {
+    color: #666;
+}
+
 /* Contact Form */
 .contact {
     padding: 100px 5%;
     text-align: center;
+    background: #fff;
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
+    color: #222;
 }
 
 form {
@@ -161,6 +206,12 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #d4af37;
+    outline: none;
 }
 
 button {
@@ -170,11 +221,15 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
     background: #333;
+    transform: translateY(-2px);
 }
 
 .hidden {
@@ -183,6 +238,10 @@ button:hover {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -190,7 +249,7 @@ button:hover {
         position: absolute;
         top: 70px;
         left: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.95);
         padding: 20px 0;
     }
 
@@ -200,5 +259,13 @@ button:hover {
 
     .menu-toggle {
         display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }

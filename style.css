@@ -94,6 +94,12 @@ nav {
     background: #f5d742;
 }
 
+/* Thank You Page Custom Styling */
+.thank-you {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1920') center/cover no-repeat;
+}
+
 /* Services */
 .services {
     padding: 100px 5%;

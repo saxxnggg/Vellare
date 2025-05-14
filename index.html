@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Sky & Sea Concierge</title>
+    <title>Vellare | Jets & Yachts Concierge</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">Elite Sky & Sea</div>
-        <ul>
+        <div class="logo">Vellare</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#fleet">Fleet</a></li>
@@ -21,7 +28,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Your Gateway to Unparalleled Luxury</h1>
+            <h1>Luxury Beyond Boundaries</h1>
+            <p>Exclusive jet and yacht charters tailored to your needs.</p>
             <a href="#contact" class="cta-button">Request Consultation</a>
         </div>
     </section>
@@ -31,23 +39,25 @@
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
+                <i class="fas fa-plane"></i>
                 <h3>Private Jet Charter</h3>
-                <p>24/7 global access to luxury aircraft.</p>
+                <p>Global access to elite aircraft with bespoke itineraries.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-ship"></i>
                 <h3>Superyacht Rentals</h3>
-                <p>Fully crewed voyages to exotic destinations.</p>
+                <p>Crewed voyages to the world’s most secluded destinations.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (Netlify Form) -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Luxury Request" rows="5"></textarea>
+        <h2>Get in Touch</h2>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Your Luxury Request" rows="5" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>

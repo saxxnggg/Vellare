@@ -6,6 +6,7 @@
   --light: #f9f9f9;
   --text: #333;
   --shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -21,6 +22,21 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
 /* ===== Navigation ===== */
 nav {
   display: flex;
@@ -31,7 +47,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 nav.scrolled {
@@ -56,11 +72,10 @@ nav.scrolled {
 
 .nav-links a {
   color: #fff;
-  text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
   position: relative;
-  transition: color 0.3s;
+  transition: var(--transition);
 }
 
 .nav-links a:after {
@@ -71,7 +86,7 @@ nav.scrolled {
   bottom: -5px;
   left: 0;
   background: var(--primary);
-  transition: width 0.3s;
+  transition: var(--transition);
 }
 
 .nav-links a:hover {
@@ -94,7 +109,7 @@ nav.scrolled {
   height: 3px;
   background: #fff;
   margin: 5px 0;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 /* ===== Hero Section ===== */
@@ -111,12 +126,11 @@ nav.scrolled {
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding: 0 5%;
 }
 
 .hero-content {
   max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 5%;
 }
 
 .hero-content h1 {
@@ -132,18 +146,16 @@ nav.scrolled {
   margin-bottom: 40px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 40px;
 }
 
 .cta-button {
   background: var(--primary);
   color: var(--dark);
   padding: 18px 40px;
-  text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
-  transition: all 0.3s ease;
+  transition: var(--transition);
   display: inline-block;
   box-shadow: var(--shadow);
   letter-spacing: 1px;
@@ -159,7 +171,7 @@ nav.scrolled {
 
 /* ===== Services Section ===== */
 .services {
-  padding: 120px 5%;
+  padding: 120px 0;
   background: var(--light);
   text-align: center;
 }
@@ -187,8 +199,7 @@ nav.scrolled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
-  max-width: 1300px;
-  margin: 0 auto;
+  padding: 0 5%;
 }
 
 .service-card {
@@ -196,7 +207,7 @@ nav.scrolled {
   padding: 50px 40px;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  transition: all 0.4s ease;
+  transition: var(--transition);
   position: relative;
   overflow: hidden;
 }
@@ -211,7 +222,7 @@ nav.scrolled {
   background: var(--primary);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.4s ease;
+  transition: var(--transition);
 }
 
 .service-card:hover {
@@ -241,43 +252,69 @@ nav.scrolled {
   line-height: 1.7;
 }
 
-/* ===== Services Section ===== */
-.services {
-  padding: 120px 5%;
-  background: var(--light);
-  text-align: center;
-}
-
-/* ... (rest of your services styles) ... */
-
 /* ===== Phone Number Section ===== */
 .phone-section {
   background: var(--primary);
-  padding: 60px 5%;
+  padding: 80px 0;
   text-align: center;
   color: var(--dark);
 }
 
 .phone-container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 0 5%;
+}
+
+.phone-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.phone-section h2:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--dark);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 25px 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* ... (rest of phone section styles shown above) ... */
+.phone-number a {
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.phone-number a:hover {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.phone-number i {
+  font-size: 2rem;
+}
+
+.availability {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 /* ===== Contact Section ===== */
 .contact {
-  padding: 120px 5%;
-  text-align: center;
-  background: #fff;
-}
-
-/* ===== Contact Section ===== */
-.contact {
-  padding: 120px 5%;
+  padding: 120px 0;
   text-align: center;
   background: #fff;
 }
@@ -309,7 +346,7 @@ input, textarea, select {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: var(--transition);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -333,10 +370,9 @@ textarea {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  transition: all 0.3s ease;
+  transition: var(--transition);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 20px;
 }
 
 .submit-btn:hover {
@@ -349,17 +385,14 @@ textarea {
 footer {
   background: var(--dark);
   color: #fff;
-  padding: 60px 5% 30px;
-  text-align: center;
+  padding: 80px 0 30px;
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  text-align: left;
+  padding: 0 5%;
 }
 
 .footer-column h3 {
@@ -383,9 +416,7 @@ footer {
 .footer-column p, .footer-column a {
   color: #bbb;
   margin-bottom: 15px;
-  display: block;
-  transition: color 0.3s;
-  text-decoration: none;
+  transition: var(--transition);
 }
 
 .footer-column a:hover {
@@ -406,7 +437,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: var(--transition);
 }
 
 .social-links a:hover {
@@ -420,6 +451,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
   color: #999;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* ===== Mobile Responsiveness ===== */
@@ -478,7 +510,7 @@ footer {
   }
   
   .services, .contact {
-    padding: 80px 5%;
+    padding: 80px 0;
   }
   
   .contact-form {
@@ -487,6 +519,16 @@ footer {
   
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .phone-section {
+    padding: 60px 0;
+  }
+  
+  .phone-number {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
@@ -519,5 +561,17 @@ footer {
   
   .social-links {
     justify-content: center;
+  }
+
+  .phone-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .phone-number {
+    font-size: 1.6rem;
+  }
+  
+  .availability {
+    font-size: 1rem;
   }
 }

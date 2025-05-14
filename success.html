@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Vellare</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="thank-you-message">
-        <h1>Thank You!</h1>
-        <p>We’ve received your request and will contact you shortly.</p>
-        <a href="/">Return Home</a>
-    </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Vellare</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#fleet">Fleet</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="hero thank-you">
+        <div class="hero-content">
+            <h1>Thank You!</h1>
+            <p>We’ve received your request and will contact you shortly.</p>
+            <a href="/" class="cta-button">Return Home</a>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>

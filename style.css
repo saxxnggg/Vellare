@@ -241,6 +241,40 @@ nav.scrolled {
   line-height: 1.7;
 }
 
+/* ===== Services Section ===== */
+.services {
+  padding: 120px 5%;
+  background: var(--light);
+  text-align: center;
+}
+
+/* ... (rest of your services styles) ... */
+
+/* ===== Phone Number Section ===== */
+.phone-section {
+  background: var(--primary);
+  padding: 60px 5%;
+  text-align: center;
+  color: var(--dark);
+}
+
+.phone-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ... (rest of phone section styles shown above) ... */
+
+/* ===== Contact Section ===== */
+.contact {
+  padding: 120px 5%;
+  text-align: center;
+  background: #fff;
+}
+
 /* ===== Contact Section ===== */
 .contact {
   padding: 120px 5%;

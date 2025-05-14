@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vellare | Jets & Yachts Concierge</title>
+    <title>Vellare | Luxury Jets & Yachts Concierge</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons (optional) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -29,39 +28,44 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Luxury Beyond Boundaries</h1>
-            <p>Exclusive jet and yacht charters tailored to your needs.</p>
+            <p>Experience bespoke jet and yacht charters tailored to your desires.</p>
             <a href="#contact" class="cta-button">Request Consultation</a>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <i class="fas fa-plane"></i>
                 <h3>Private Jet Charter</h3>
-                <p>Global access to elite aircraft with bespoke itineraries.</p>
+                <p>Global access to elite aircraft with 24/7 availability.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-ship"></i>
                 <h3>Superyacht Rentals</h3>
-                <p>Crewed voyages to the world’s most secluded destinations.</p>
+                <p>Luxury crewed voyages to exclusive destinations.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section (Netlify Form) -->
+    <!-- Contact Form (Netlify) -->
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <form name="contact" method="POST" data-netlify="true">
+        <h2>Contact Us</h2>
+        <form name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Your Request" rows="5" required></textarea>
+            <textarea name="message" placeholder="Your Luxury Request" rows="5" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
